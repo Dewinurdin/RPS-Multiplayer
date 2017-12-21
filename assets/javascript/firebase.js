@@ -1,3 +1,4 @@
+console.log("Hello Firebase");
 // Initialize Firebase
    var config = {
     apiKey: "AIzaSyDlNbrao0ka-OqOcnazlLFi2qFYCACQAiQ",
@@ -11,10 +12,7 @@
 
   var database = firebase.database();
 
-// database.ref().on("value", function(snapshot) {
-//       console.log(snapshot.val());
-//       $("#click-value").text(snapshot.val().scoreCount);
-//       clickCounter = snapshot.val().scoreCount;
-//     }, function(errorObject) {
-//       console.log("The read failed: " + errorObject.code);
-//     });
+	database.ref().on("value", function(snapshot) {
+      console.log(snapshot.val());
+      
+    });

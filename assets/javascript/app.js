@@ -6,6 +6,14 @@ console.log("hello");
 var playerOneScore = 0;
 var playerTwoScore =0;
 
+//input name on form, submit button, and show on html
+function inputName(event) {
+	event.preventDefault();
+	var userInput = $("#player-oneForm").on("click", ".btn", function() {
+		// $("#one-input").html(?????)
+	})
+}
+
 //function on click on rock, paper or scissor image
 function main() {
 $("#r").on("click", function() {
@@ -43,7 +51,7 @@ function game(userChoice) {
 			
 		console.log("user wins");
 		break;
-// 		//player 2 win as follow
+		//player 2 win as follow
 		case "rp":
 		case "ps":
 		case "sr":
@@ -66,20 +74,19 @@ function win(firtPlayer, secondPlayer) {
 		playerOneScore++;
 		$("#player-onescore").text(playerOneScore);
 		$("#player-twoscore").text(playerTwoScore);
-		$(".result").text(convertToWord(firstPlayer)) "beats" + convertToWord(playerTwo). "You Win!";
+		// $(".result").text(convertToWord(firstPlayer)) "beats" + convertToWord(playerTwo). "You Win!";
 }
 
 function lose() {
 		playerTwoScore++;
 		$("#player-onescore").text(playerOneScore);
 		$("#player-twoscore").text(playerTwoScore);
-		$(".result").text(convertToWord(secondPlayer)) "beats" + convertToWord(firstPlayer). "You Win!";
-
+		// $(".result").text(convertToWord(secondPlayer)) "beats" + convertToWord(firstPlayer). "You Win!";
 }
 
 function draw() {
 	console.log(DRAW);
-		$(".result").text(convertToWord(firstPlayer)) "equals" + convertToWord(playerTwo). "It's a Draw!";
+		// $(".result").text(convertToWord(firstPlayer)) "equals" + convertToWord(playerTwo). "It's a Draw!";
 
 }
 //convert r,p,s to word
@@ -90,17 +97,8 @@ function convertToWord(letter) {
 	return "Scissor";
 }
 
-
-
-
-
-
-
-
-
-
 }); 
-//doc.ready
+
 
 
 

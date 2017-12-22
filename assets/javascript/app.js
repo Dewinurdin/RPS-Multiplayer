@@ -9,8 +9,8 @@ var playerTwoScore =0;
 //input name on form, submit button, and show on html
 function inputName(event) {
 	event.preventDefault();
-	var userInput = $("#player-oneForm").on("click", ".btn", function() {
-		// $("#one-input").html(?????)
+	var userInput = $(".name-input").on("click", ".btn", function() {
+		 $("#submit").text(userInput);
 	})
 }
 

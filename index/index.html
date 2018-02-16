@@ -1,63 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>RPS Multiplayer</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- BOOTSTRAP Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="../assets/css/style.css">
-	<!-- JQUERY -->
-	 <script src="https://cdnjs.CloudFlare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="../assets/javascript/app.js"></script>
-	<!-- FIREBASE -->
-	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-	<script type="text/javascript" src="../assets/javascript/firebase.js"></script>	
-</head>
-<body>
-	<header>
-		<h1>Rock Paper Scissor</h1>
-	</header>
-
-		<div class="score-board">
-			<div class="badge" id="player-one">
-				<form id = "player-oneForm">
-					<input type="text" class="name-input"><br>
-					<input id="submit" class = "btn" type="submit" value="Submit">
-				</form>
-			</div>
-
-			<div class="badge" id="player-two">
-				<form id = "player-oneForm">
-					<input type="text" class="name-input"><br>
-					<input id="submit" class = "btn" type="submit" value="Submit">
-				</form>			
-			</div>
-
-			<span id="player-onescore">0</span> : <span id="player-twoscore">0</span>
-		</div>
-
-		<div class="result">
-			<p></p>
-		</div>
-
-		<div class="choices">
-			<div class="choice"  id="r">
-				<img src="../assets/images/rock.jpg" alt="rock" height="70px" width="70px">
-			</div> 
-			<div class="choice" id="p">
-				<img src="../assets/images/paper.jpg" alt="paper" height="70px" width="70px">
-			</div> 
-			<div class="choice" id="s">
-				<img src="../assets/images/scissor.jpg" alt="scissor" height="70px" width="70px">
-			</div> 
-			
-		<p id="action-message">Make Your Move</p>
-
-
-	
-	
-
-
-</body>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Rocks Paper Scissors</title>
+    <!-- CSS reset sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <!-- Our Own CSS File -->
+    <link rel="stylesheet" href="./../assets/css/style.css">
+    <!-- Firebase Link -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <div id="sizer">
+      <div id="swap-zone"><input id="username" placeholder="Name"/>
+        <button id="start">Start</button>
+      </div>
+      <div id="current-turn"></div>
+      <div id="game-div">
+        <div id="player1">
+          <h3 id="player1-name">Player1</h3>
+          <ul>
+          </ul>
+          <div id="player1-chosen"></div>
+          <div class="outcomes">
+            <div class="outcome-trackers" id="player1-wins"></div>
+            <div class="outcome-trackers" id="player1-losses"></div>
+          </div>
+        </div>
+        <div id="result"></div>
+        <div id="player2">
+          <h3 id="player2-name">Player2</h3>
+          <ul>
+          </ul>
+          <div id="player2-chosen"></div>
+          <div class="outcomes">
+            <div class="outcome-trackers" id="player2-wins"></div>
+            <div class="outcome-trackers" id="player2-losses"></div>
+          </div>
+        </div>
+      </div>
+      <div id="chat">
+        <div id="chat-messages"></div>
+        <div id="chat-bar">
+          <input id="chat-input" />
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Script -->
+    <script src="./../assets/javascript/app.js"></script>
+  </body>
 </html>
